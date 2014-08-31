@@ -1,0 +1,57 @@
+
+    Open an SSH client. (find out how to connect using PuTTY)
+    Locate your private key file (startup-gp.pem). The wizard automatically detects the key you used to launch the instance.
+    Your key must not be publicly viewable for SSH to work. Use this command if needed:
+
+    chmod 400 startup-gp.pem
+
+    Connect to your instance using its Public IP:
+
+    54.191.115.174
+
+Example:
+
+ssh -i startup-gp.pem ubuntu@54.191.115.174
+
+
+
+
+
+
+
+
+
+
+
+//STARTUP ENGINE
+
+1 # Execute these commands on your EC2 instance.
+2 # Note that -qO- is not -q0-. O is the English letter, 0 is the number zero.
+3
+4 # 1) Install heroku and git
+5 $ sudo apt-get install -y git-core
+6 $ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+7 $ which git
+8 $ which heroku
+9 # 2) Login and set up your SSH keys
+10 $ heroku login
+11 $ ssh-keygen -t rsa
+12 $ heroku keys:add
+13 # 3) Clone a sample repo and push to heroku
+14 $ git clone https://github.com/heroku/node-js-sample.git
+15 $ cd node-js-sample
+16 $ heroku create
+17 $ git push heroku master
+
+
+
+
+//MY FIRST APP EN HEROKU - SHIT
+
+ http://shielded-garden-6457.herokuapp.com/
+
+
+
+
+
+
