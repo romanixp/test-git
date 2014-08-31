@@ -1,0 +1,41 @@
+
+# Instalación de Git.
+sudo apt-get install git
+git config --global user.name "RAUL-UBUNTU-14.04"
+git config --global user.email "romanixd@gmail.com"
+
+
+
+
+//posicionarme en una carpeta y agregar .gitignore si es nesesario
+
+git init
+git add "*.*"
+git remote add origin "ruta http de un repo creado en github"
+git commit -m "version 0.1"
+git push -u origin master
+user:   clave:
+
+//hacemos modificaciones
+
+git add --all
+git commit -m "version 0.2"
+git push -u origin master
+
+
+
+
+
+
+
+
+
+
+
+
+backen1
+ssh
+git@github.com:romanixp/backend-node.git
+
+http
+https://github.com/romanixp/backend-node.git
